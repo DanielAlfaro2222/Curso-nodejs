@@ -1,0 +1,11 @@
+{
+  "name": "module-example",
+  "version": "1.0.0",
+  "description": "Ejemplo de la creacion de un paquete",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Daniel",
+  "license": "GPL-3.0"
+}
