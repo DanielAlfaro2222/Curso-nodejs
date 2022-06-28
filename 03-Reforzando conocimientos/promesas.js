@@ -16,10 +16,8 @@ const empleados = [
 ];
 
 const getNamePromise = (empleado) => {
-    return new Promise((resolve, reject) => {
-
-        (empleado) ? resolve(empleado) : reject('No se encontro al usuario');
-    }).then(result => console.log(result.name))
+    return new Promise((resolve, reject) => (empleado) ? resolve(empleado) : reject('No se encontro al usuario'))
+        .then(result => console.log(result.name))
         .catch(err => console.log(err));
 }
 
