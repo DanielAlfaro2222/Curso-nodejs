@@ -36,15 +36,18 @@ class Tareas {
     }
 
     listadoTareasPendientes() {
-        let listado = this.listadoTareas().filter(tarea => tarea.completado === false);
+        let listado = this.listadoTareas().filter(
+            (tarea) => tarea.completado === false
+        );
 
         if (listado.length === 0) {
-            return '        No hay tareas pendientes';
+            return "        No hay tareas pendientes";
         } else {
-            let resultado = ''
+            let resultado = "";
 
             listado.forEach((tarea, index) => {
-                resultado += `      ${++index}. ${tarea.description} :: ${"Pendiente".red}\n`;
+                resultado += `      ${++index}. ${tarea.description} :: ${"Pendiente".red
+                    }\n`;
             });
 
             return resultado;
@@ -52,18 +55,21 @@ class Tareas {
     }
 
     listadoTareasCompletadas() {
-        let listado = this.listadoTareas().filter(tarea => tarea.completado);
+        let listado = this.listadoTareas().filter((tarea) => tarea.completado);
 
         if (listado.length === 0) {
-            return '        No hay tareas completadas';
+            return "        No hay tareas completadas";
         } else {
-            let resultado = ''
+            let resultado = "";
 
             listado.forEach((tarea, index) => {
                 let fecha = new Date(+tarea.completadoEn);
-                fecha = `${fecha.getDate()}/${fecha.getMonth()}/${fecha.getFullYear()} ${String(fecha.getHours()).padStart(2, '0')}:${String(fecha.getMinutes()).padStart(2, '0')}`;
+                fecha = `${fecha.getDate()}/${fecha.getMonth()}/${fecha.getFullYear()} ${String(
+                    fecha.getHours()
+                ).padStart(2, "0")}:${String(fecha.getMinutes()).padStart(2, "0")}`;
 
-                resultado += `      ${++index}. ${tarea.description} :: ${"Completado".green} :: ${fecha.green}\n`;
+                resultado += `      ${++index}. ${tarea.description} :: ${"Completado".green
+                    } :: ${fecha.green}\n`;
             });
 
             return resultado;
@@ -81,17 +87,14 @@ class Tareas {
     }
 
     completarTareas(tareas) {
-        tareas.forEach(id => {
-            const completed = this.listadoTareas().filter(tarea => tarea.id === id);
-
-            if (completed.length !== 0) {
-                this.#listado[id].completado = true;
-                this.#listado[id].completadoEn = new Date().getTime();
+        this.listadoTareas().forEach((tarea) => {
+            if (tareas.includes(tarea.id)) {
+                this.#listado[tarea.id].completado = true;
+                this.#listado[tarea.id].completadoEn = new Date().getTime();
             } else {
-                this.#listado[id].completado = false;
-                this.#listado[id].completadoEn = null;
+                this.#listado[tarea.id].completado = false;
+                this.#listado[tarea.id].completadoEn = null;
             }
-
         });
     }
 }

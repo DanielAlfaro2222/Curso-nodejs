@@ -1,0 +1,56 @@
+{
+	"place.6089854572752850": {
+		"nombre": "Bogotá, Colombia",
+		"longitud": -74.08083,
+		"latitud": 4.59889,
+		"descripcion": "tormenta con lluvia ligera",
+		"temperatura_minima": 11.58,
+		"temperatura_maxima": 11.58,
+		"temperatura": 11.58
+	},
+	"place.6586121315664750": {
+		"nombre": "Cali, Valle del Cauca, Colombia",
+		"longitud": -76.51972,
+		"latitud": 3.44,
+		"descripcion": "nubes dispersas",
+		"temperatura_minima": 23.97,
+		"temperatura_maxima": 23.97,
+		"temperatura": 23.97
+	},
+	"place.8059514065163140": {
+		"nombre": "Soacha, Cundinamarca, Colombia",
+		"longitud": -74.21444,
+		"latitud": 4.57806,
+		"descripcion": "tormenta con lluvia ligera",
+		"temperatura_minima": 11.93,
+		"temperatura_maxima": 11.93,
+		"temperatura": 11.93
+	},
+	"place.14774924452493150": {
+		"nombre": "Barranquilla, Atlántico, Colombia",
+		"longitud": -74.79639,
+		"latitud": 10.96389,
+		"descripcion": "nubes dispersas",
+		"temperatura_minima": 27.88,
+		"temperatura_maxima": 27.88,
+		"temperatura": 27.88
+	},
+	"place.10708255346562040": {
+		"nombre": "Madrid, Madrid, España",
+		"longitud": -3.703583,
+		"latitud": 40.416705,
+		"descripcion": "cielo claro",
+		"temperatura_minima": 19.53,
+		"temperatura_maxima": 24.96,
+		"temperatura": 22.58
+	},
+	"place.9157637584547040": {
+		"nombre": "Medellín, Antioquia, Colombia",
+		"longitud": -75.57483,
+		"latitud": 6.24475,
+		"descripcion": "nubes dispersas",
+		"temperatura_minima": 20.13,
+		"temperatura_maxima": 20.13,
+		"temperatura": 20.13
+	}
+}
