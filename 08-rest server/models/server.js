@@ -1,6 +1,6 @@
 const express = require('express');
 require('dotenv').config();
-const { controllerApiDelete, controllerApiPOST, controllerApiPUT, controllerApiGET } = require('../controllers/controllers');
+const cors = require('cors');
 
 class Server {
     constructor() {
@@ -10,18 +10,19 @@ class Server {
         // Especificar la carpeta que contiene los archivos estaticos
         this.app.use(express.static('public'));
 
+        // Configurar el cors para permitir que todos los origenes puedan hacer peticiones a nuestra API
+        this.app.use(cors());
+
+        // Especificar que la informacion que se reciba sera de tipo json
+        this.app.use(express.json());
+
         // Rutas
         this.routes();
     }
 
     routes() {
-        this.app.get('/api', controllerApiGET);
-
-        this.app.post('/api', controllerApiPOST);
-
-        this.app.put('/api', controllerApiPUT);
-
-        this.app.delete('/api', controllerApiDelete);
+        // Importar las rutas creadas para la API
+        this.app.use('/api', require('../routes/routes-api'));
     }
 }
 
